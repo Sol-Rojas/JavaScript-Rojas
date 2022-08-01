@@ -1,42 +1,51 @@
-function mostrar(){
-
-    let producto
-    do {
-        producto = parseInt(prompt(`Hola ${usuario} ¿Qué precio desea consultar?:\n\n 1.Piano🎹 \n 2.Guitarra🎸\n 3.Violin🎻 \n 4. Regresar\n`))
-
-        if (producto == 1){
-            alert ("Su precio es de $15.000")
-           
-        } else if (producto == 2){
-            alert ("Su precio es de $12.000")
-            
-        } else if (producto == 3) {
-            alert ("Su precio es de $16.000")
-           
-        } else if (producto == 4) {
-        break
-
-        } else{
-        alert ("Ingrese una opción válida")
-        }
-    
-    } while (ciudad !=4); 
+class Producto {
+    constructor (nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
 }
 
-let opciones
-let usuario
+const instrumento1 = new Producto ("piano", 18000)
+const instrumento2 = new Producto ("guitarra electrica", 30000)
+const instrumento3 = new Producto ("violin", 17000)
+const instrumento4 = new Producto ("trompeta", 30000)
+const instrumento5 = new Producto ("saxofon", 80000)
 
+const instrumentos = [instrumento1, instrumento2, instrumento3, instrumento4, instrumento5]
+const noEncontrados = []
+
+let producto
 do {
-    opciones= parseInt(prompt("Bienvenido a SoundSarc🎼, seleccione una opcion\n\n 1.Ingresar cuenta \n 2.Costo del envio \n 3. Salir de la aplicacion\n"))
-    
-    switch(opciones){
+    producto = parseInt(prompt(`Bienvenido a SoundSarc🎼 \nSeleccione una opción:\n 1. Piano🎹 \n 2. Guitarra🎸\n 3. Violin🎻\n 4. Saxofon🎷\n 5. Trompeta🎺\n 6. Ver todos los precios en la consola\n 7. No encontre el instrumento que buscaba \n 8. Salir`))
+    switch (producto){
         case 1:
-            usuario=prompt("Ingrese su nombre")
-            mostrar()
-            break
+            alert ("Su precio es de $18.000")    
+            break      
         case 2:
-            alert("Los envios tienen un costo de $500")
+            alert ("Su precio es de $30.000")   
+            break        
+        case 3:
+            alert ("Su precio es de $17.000")
+             break
+        case 4: 
+            alert ("Su precio es de $30.000")
             break
-    }
-
-} while (opciones != 3);
+        case 5:
+            alert ("Su precio es de $80.000")
+            break
+        case 6:
+            console.table(instrumentos)  
+            break 
+        case 7:
+            noEncontrados.push(prompt("Ingrese el instrumento que no encontro para que la próxima lo tengamos"))
+            console.log(noEncontrados)
+            alert ("Verificaremos si podemos conseguir lo que solicitó\n Hasta la próxima!")
+            break
+        case 8:
+            alert(`Hasta luego!`)
+            break
+        default:     
+            alert ("Ingrese una opción válida")
+            break
+    }    
+} while (producto !=8); 
