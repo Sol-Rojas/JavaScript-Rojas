@@ -1,60 +1,59 @@
+const saludar = document.getElementById("titulo")
+
+const user = {
+    username: prompt("Ingrese su nombre"),
+}
+titulo.innerText = `¡Bienvenido a SoundSarc ${user.username}!`
+
 class Producto {
-    constructor (nombre, precio) {
+    constructor(nombre, precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
 }
 
-const instrumento1 = new Producto ("piano", 18000)
-const instrumento2 = new Producto ("guitarra electrica", 30000)
-const instrumento3 = new Producto ("violin", 17000)
-const instrumento4 = new Producto ("trompeta", 35000)
-const instrumento5 = new Producto ("saxofon", 80000)
+const instrumento1 = new Producto("Piano 🎹", 28000)
+const instrumento2 = new Producto("Guitarra electrica 🎸", 39000)
+const instrumento3 = new Producto("Violin 🎻", 18000)
+const instrumento4 = new Producto("Trompeta 🎷", 60000)
+const instrumento5 = new Producto("Saxofon 🎺", 90000)
 
 const instrumentos = [instrumento1, instrumento2, instrumento3, instrumento4, instrumento5]
-const noEncontrados = []
+
+const ventas = document.getElementById("productos")
+const envios = document.getElementById("envio")
 
 let producto
 do {
-    producto = parseInt(prompt(`Bienvenido a SoundSarc🎼 \nSeleccione una opción:\n 1. Piano🎹 \n 2. Guitarra🎸\n 3. Violin🎻\n 4. Saxofon🎷\n 5. Trompeta🎺\n 6. Ver todos los precios en la consola\n 7. Lo más económico \n 8. Comprar todo \n 9. No encontre el instrumento que buscaba \n 10. Salir`))
-    switch (producto){
+    producto = parseInt(prompt(`Bienvenido a SoundSarc🎼 \nSeleccione una opción:\n\n 1. Productos \n\n 2. Envios \n\n 3. Salir`))
+    switch (producto) {
         case 1:
-            alert ("Su precio es de $18.000")    
-            break      
+            instrumentos.forEach(instrumento => {
+                ventas.innerHTML += `
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">${instrumento.nombre}</h5>
+                        <p class="card-text">Precio: $${instrumento.precio}</p
+                    </div>
+                </div>
+                 `
+            })
+            break
         case 2:
-            alert ("Su precio es de $30.000")   
-            break        
+            envios.innerHTML = `
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Envios</h5>
+                    <p class="card-text">CABA: $400</p>
+                    <p class="card-text">GBA: $500</p>
+                </div>
+            </div>
+             `
+            break
         case 3:
-            alert ("Su precio es de $17.000")
-             break
-        case 4: 
-            alert ("Su precio es de $35.000")
             break
-        case 5:
-            alert ("Su precio es de $80.000")
+        default:
+            alert("Ingrese una opción válida")
             break
-        case 6:
-            console.table(instrumentos)  
-            break 
-        case 7:
-            console.log(instrumentos.find(instrumentArray => instrumentArray.precio == 30000))
-            break
-        case 8:
-            const sumarPrecios = instrumentos.map(instrumentosArray => instrumentosArray.precio)
-            console.log(sumarPrecios)
-            console.log(sumarPrecios.reduce((ant,post) => ant + post, 0))
-            alert("Para ver el total de su compra vea la consola :D")
-            break
-        case 9:
-            noEncontrados.push(prompt("Ingrese el instrumento que no encontro para que la próxima lo tengamos"))
-            console.log(noEncontrados)
-            alert ("Verificaremos si podemos conseguir lo que solicitó\n Hasta la próxima!")
-            break
-        case 10:
-            alert(`Hasta luego!`)
-            break
-        default:     
-            alert ("Ingrese una opción válida")
-            break
-    }    
-} while (producto !=10);
+    }
+} while (producto != 3);
