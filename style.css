@@ -15,8 +15,71 @@ header {
 
 }
 
+button {
+    background-color: #4e1010;
+    border: none;
+    color: antiquewhite;
+    padding: 5px;
+    box-shadow: 2px 2px 2px rgba(94, 52, 46, 0.87);
+}
+
+button:hover{
+    background-color: rgba(250, 235, 215, 0.829);
+    color: #4e1010;
+    box-shadow: 2px 2px 2px rgba(146, 83, 73, 0.87);
+}
+
 .card {
     flex-direction: row;
     margin: 10px;
     background-color: rgba(119, 31, 31, 0.5);
+} 
+
+.clicks {
+    background-color: #501c1096;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px rgba(94, 52, 46, 0.87);
+}
+
+@media (max-width: 767px) {
+    .formulario {
+        flex-direction: column;
+    }
+}
+
+form {
+    text-align: start;
+    color: rgb(255, 252, 240);
+}
+
+.clicks .btn-dark {
+    background-color: #9e6655;
+    border: none;
+    box-shadow: 1px 1px 1px 1px #4e1010;
+}
+
+.clicks .btn-dark:hover {
+    background-color: #4e1010;
+}
+
+.form-control {
+    border: none;
+    background: transparent;
+    border-bottom: solid 5px #be563c;
+}
+
+.tituloContacto {
+    margin-bottom: 10px;
+    background-color: #9e665567;
+    padding: 10px;
+}
+
+.contacto {
+    font-weight: bold;
+    color: #ce9381;
+    text-decoration: none;
 }
