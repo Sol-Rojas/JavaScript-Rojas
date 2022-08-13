@@ -39,7 +39,6 @@ productos.addEventListener(`click`, () => {
                        <p class="card-text">Precio: $${instrumento.precio}</p
                    </div>
                </div>
-               
                `
             })
 })
