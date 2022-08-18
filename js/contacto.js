@@ -17,6 +17,13 @@ const users = JSON.parse(localStorage.getItem("usuarios")) ?? localStorage.setIt
 clientes.addEventListener("submit", (evento) => {
     evento.preventDefault()
 
+    Swal.fire({
+        icon: 'success',
+        title: '<h3 id="titulo-tarjeta">Enviado<h3>',
+        text: 'En los próximos dias te estara llegando información',
+        footer: '<a href="">Volver</a>'
+    })
+
     const datForm = new FormData (evento.target)
     const consulta = new Cliente (datForm.get("email"), datForm.get("nombre"), datForm.get("descripcion"))
 
