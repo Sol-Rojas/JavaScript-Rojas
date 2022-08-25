@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "nombre": "Aplificador",
+        "marca": "Marshall",
+        "precio": 95063,
+        "stock": 30,
+        "img":"https://http2.mlstatic.com/D_NQ_NP_886595-MLA32643577511_102019-W.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Bateria",
+        "marca": "Yamaha",
+        "precio": 198179,
+        "stock": 20,
+        "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/236115/Guitarra_Transacustica_Tecnica-02.jpg?v=637829045632870000"
+    },
+    {
+        "id": 3,
+        "nombre": "Teclado",
+        "marca": "Casio",
+        "precio": 106246,
+        "stock": 18,
+        "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/206159/713112-MLA28239910840_092018-F.jpg?v=637313073662970000"
+    },
+    {
+        "id": 4,
+        "nombre": "Guitarra Electricoacústica",
+        "marca": "Yamaha",
+        "precio": 40000,
+        "stock": 30,
+        "img": "https://d1aeri3ty3izns.cloudfront.net/media/58/584471/1200/preview.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Amplificador Guitarra",
+        "marca": "Fender",
+        "precio": 691.128,
+        "stock": 7,
+        "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/224423/225814~1.png?v=637542903080400000"
+    },
+    {
+        "id": 6,
+        "nombre": "Ukelele",
+        "marca": "Aloha",
+        "precio": 12000,
+        "stock": 21,
+        "img": "https://www.stars-music.es/medias/aloha/20c-concert-tout-sapele-sap-hd-4-116510.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Guitarra eléctrica",
+        "marca": "Apple",
+        "precio": 50000,
+        "stock": 12,
+        "img": "https://www.trinomusic.com/sites/default/files/content_images/product/guitarra_electrica_yamaha_pacifica_112v_azul_agua__1.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Caja de ritmos",
+        "marca": "Roland",
+        "precio": 277511,
+        "stock": 30,
+        "img": "https://bairesrocks.vteximg.com.br/arquivos/ids/220516-700-700/D_NQ_NP_947245-MLA43147670264_082020-O.jpg?v=637335313306330000"
+    },
+    {
+        "id": 9,
+        "nombre": "Violin",
+        "marca": "Yamaha",
+        "precio": 120000,
+        "stock": 21,
+        "img": "https://solomusica.com.ar/sm2020/5467-home_default/violin-yamaha-v5sa-44.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Bajo",
+        "marca": "Squier",
+        "precio": 93800,
+        "stock": 25,
+        "img": "https://www.casainstrumental.com/wp-content/uploads/2022/05/378603506.jpg"
+    }
+    
+]
