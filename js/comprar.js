@@ -73,6 +73,17 @@ fetch('../json/productos.json')
           products.push(newProduct)
 
           localStorage.setItem(`carrito`, JSON.stringify(products))
+
+          Toastify({
+            text: `Producto agregado`,
+            duration: 2000,
+            gravity: "top",
+            position: "left",
+            stopOnFocus: true,
+            style: {
+              background: "rgb(219, 149, 149)",
+            }
+          }).showToast();
         }
       })
     })
@@ -113,7 +124,7 @@ function eventosCarrito(prodStorage) {
         position: "left",
         stopOnFocus: true,
         style: {
-          background: "rgb(181, 80, 80)",
+          background: "rgb(202, 38, 38)",
         }
       }).showToast();
 
